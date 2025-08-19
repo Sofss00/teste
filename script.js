@@ -9,7 +9,7 @@
     var mvLeft = false, mvUp = false, mvRight = false, mvDown = false;
 
     // tiles
-    var tileSize = 64;
+    var tileSize = 96;
     var tileSrcSize = 192;
 
     // imagem do tilesheet
@@ -26,9 +26,9 @@
     var player = {
         x: tileSize + 2,
         y: tileSize + 2,
-        width: 24,
-        height: 32,
-        speed: 9,
+        width: 48,
+        height: 64,
+        speed: 4,
         srcX: 0,
         srcY: tileSrcSize,
         countAnim: 0
@@ -217,4 +217,5 @@ window.showFinal = function(){
 };
 
 })();
+
 
