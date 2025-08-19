@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+canvas {
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+/* Telas */
+#canvas_div, #invitation, #finalScreen {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Escondidas inicialmente */
+#invitation, #finalScreen { display: none; }
+
+/* Tela convite */
+#invitation {
+  background: #f7f7f7;
+background: radial-gradient(circle, rgba(247, 247, 247, 1) 35%, rgba(209, 209, 209, 1) 76%, rgba(176, 176, 176, 1) 100%);
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 50px;
+}
+
+/* Botões */
+.btn {
+  background: #000000;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  font-size: 30px;
+  box-shadow: rgba(34, 34, 34, 0.4) 5px 5px, rgba(37, 37, 37, 0.3) 10px 10px, rgba(39, 39, 39, 0.2) 15px 15px, rgba(37, 37, 37, 0.1) 20px 20px, rgba(39, 39, 39, 0.05) 25px 25px;
+}
+.btn:hover { background: #3b3b3b; }
+
+/* Container balões */
+#balloon-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* deixa balões não clicáveis */
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Botões dentro da tela de convite */
+#invitation .btn {
+  pointer-events: auto; /* garante que botões recebam clique */
+  z-index: 15; /* aumentar z-index para ficar acima dos balões */
+}
+
+
+/* Balões */
+.balloon {
+  position: absolute;
+  bottom: -60px;
+  font-size: 30px;
+  animation: rise linear forwards;
+  text-align: center;
+  line-height: 1;
+}
+
+/* cores */
+.red { color: red; }
+.blue { color: blue; }
+.green { color: green; }
+.yellow { color: yellow; }
+.purple { color: purple; }
+.pink { color: pink; }
+
+/* Animação subida */
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* Tela final */
+#finalScreen {
+background: #f7f7f7;
+background: radial-gradient(circle, rgba(247, 247, 247, 1) 35%, rgba(209, 209, 209, 1) 76%, rgba(176, 176, 176, 1) 100%);
+  font-size: 24px;
+  z-index: 999;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+}

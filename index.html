@@ -5,10 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
-    <canvas width="1000" height="900" style="border: solid;"></canvas>
+    <div id="canvas_div">
+  <canvas width="600" height="600"></canvas>
+</div>
+
+<!-- Tela convite -->
+<div id="invitation">
+  <h1>Aceita ser <br> nosso padrinho?</h1>
+  <div>
+    <button class="btn" onclick="showFinal()">Claro</button>
+    <button class="btn" onclick="showFinal()">Com certeza</button>
+  </div>
+  <div id="balloon-container"></div>
+</div>
+
+<!-- Tela final -->
+<div id="finalScreen">
+  <h2>Parabéns! <br> Agora você é oficialmente <br> padrinho do 3°B!</h2>
+</div>
+
 
     <script src="script.js"></script>
 </body>
