@@ -28,7 +28,7 @@
         y: tileSize + 2,
         width: 48,
         height: 64,
-        speed: 4,
+        speed: 3,
         srcX: 0,
         srcY: tileSrcSize,
         countAnim: 0
@@ -217,6 +217,7 @@ window.showFinal = function(){
 };
 
 })();
+
 
 
 
